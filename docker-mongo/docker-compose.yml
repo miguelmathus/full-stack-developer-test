@@ -1,0 +1,13 @@
+version: '3'
+services:
+    mongoDB:
+        image: mongo:latest
+        volumes:
+        - db-data:/data/db
+        - mongo-config:/data/configdb
+        restart: always
+        ports:
+        - 27017:27017
+volumes:
+    db-data:
+    mongo-config:
